@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,500&display=swap');
+
+html{
+  transition: 1s;
+  overflow: hidden;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #120907;
+  transition: 0.3s;
+}
+
+form{
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 20px;
+  width: 400px;
+  height: 600px;
+  padding: 25px;
+  animation: fade 1s linear;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+.input:hover{
+  letter-spacing: 1px;
+}
+
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+  border-radius: 110px;
+  background: black;
+}
+
+.img i{
+  font-size: 120px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.active{
+  filter: invert(1);
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-shadow: 0px 7px 13px -8px #000000; 
+  box-shadow: 0px 7px 13px -8px #000000;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  letter-spacing: 2px;
+}
+
+.show{
+  animation: other 1s linear;
+}
+
+#register-form{
+  flex-direction: column;
+  display: none;
+}
+
+form span{
+  display: block;
+  text-align: center;
+}
+
+form p {
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.5s;
+  text-decoration:underline;
+}
+
+form p:hover{
+  letter-spacing: 5px;
+}
+
+.validate-error{
+  animation: nono 0.2s linear backwards, fade paused;
+  animation-iteration-count: 2;
+}
+
+.form-hide {
+  animation: hide 1s linear forwards;
+}
+
+ul li{
+  position: absolute;
+  animation: stars 2s infinite linear;
+  background-color: #fff;
+}
+
+
+
+@keyframes fade {
+  from{
+    transform: translate(-35%);
+    opacity: 0;
+  }to{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes stars{
+  from{
+    opacity: 0;
+    transform: translateY(100%);
+  }50%{
+    opacity: 1;
+  }
+  to{
+    transform: translateY(-1200px);
+  }
+}
+
+
+
+@keyframes nono {
+  0%{
+    transform: translateX(0);
+  }
+  35%{
+    transform: translateX(-25%);
+  }
+  70%{
+    transform: translateX(25%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide {
+  0%{
+    transform: translateY(0);
+  }
+  70%{
+    transform: translateY(-60%);
+  }
+  100%{
+    transform: translateY(100vh);
+  }
+}
